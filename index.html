@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio di Christian Bacchielli, Web Developer. Progetti moderni in HTML, CSS e JavaScript con focus su design pulito ed esperienza utente."
+    />
+    <meta
+      name="keywords"
+      content="Christian Bacchielli, portfolio, web developer, frontend developer, HTML, CSS, JavaScript"
+    />
+    <meta name="author" content="Christian Bacchielli" />
+    <meta name="theme-color" content="#1a1a1a" />
+    <meta name="robots" content="index, follow" />
+    <title>Christian Bacchielli - Portfolio</title>
+    <style>
+      /* font import */
+      @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap");
+
+      /* icons import */
+
+      /* CSS */
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        scroll-behavior: smooth;
+      }
+
+      /* smooth scroll */
+
+      #about,
+      #skills,
+      #contatti {
+        scroll-margin-top: 6rem;
+      }
+      body {
+        background-color: rgb(50, 49, 49);
+        color: rgb(239, 239, 239);
+        font-family: "Outfit", sans-serif;
+      }
+
+      header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(26, 26, 26);
+        position: sticky;
+        top: 0;
+        z-index: 99;
+      }
+
+      nav {
+        padding: 2rem;
+      }
+
+      ul {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 3rem;
+        list-style: none;
+      }
+
+      li > a {
+        color: white;
+        text-decoration: none;
+        transition: all 0.2s ease-in-out;
+      }
+
+      li > a:hover {
+        text-shadow: 2px 0px 20px #ffffff;
+      }
+
+      #about {
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        animation: slide-in 1.5s;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+        font-weight: 400;
+        margin: 0;
+        margin-bottom: 0.5rem;
+        padding: 0;
+        animation: slide-in 1.5s;
+      }
+
+      #about p {
+        margin: 0;
+        padding: 0;
+        font-size: 0.9rem;
+        text-align: center;
+      }
+
+      #about img {
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        z-index: 0;
+        animation: slide-in 1.5s;
+      }
+
+      #about picture {
+        position: relative;
+      }
+
+      #intro {
+        padding: 2rem 0.6rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        animation: slide-in 1.5s;
+
+      }
+
+      #intro p,
+      #skills p {
+        padding: 0.6rem;
+        letter-spacing: 0.1rem;
+        margin: 0;
+      }
+
+      h2 {
+        font-size: 2.2rem;
+        font-weight: 500;
+        text-align: center;
+        letter-spacing: 0.2rem;
+        margin-top: 0.6rem;
+        margin-bottom: 1.5rem;
+      }
+
+      #skills,
+      .projects,
+      .contacts {
+        padding: 2rem 0.6rem;
+      }
+
+      #skills,
+      .contacts {
+        background-color: rgb(26, 26, 26);
+      }
+
+      .html-logo,
+      .css-logo {
+        width: 90px;
+        height: 90px;
+      }
+
+      .skills-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .projects,
+      .contacts {
+        text-align: center;
+      }
+
+      #email {
+        font-size: 1.5rem;
+      }
+
+      #email a {
+        color: white;
+        text-decoration: none;
+      }
+
+      #email a:hover {
+        text-shadow: 2px 0px 20px #ffffff;
+      }
+
+      /* animazioni */
+
+      @keyframes slide-in {
+        from {
+          /* transform: translateY(0%); */
+          opacity: 0;
+        }
+
+        to {
+          /* transform: translateY(100%); */
+          opacity: 1;
+        }
+      }
+
+      /* RESPONSIVE DESKTOP*/
+
+      @media (min-width: 1024px) {
+        /* Menù */
+
+        ul {
+          gap: 4rem;
+          list-style: none;
+        }
+
+        li > a {
+          font-size: 1.2rem;
+          letter-spacing: 0.1rem;
+        }
+
+        /* h1 & p & ridimensionamento h2 e immagine profilo */
+
+        #about img {
+          width: 300px;
+          height: 300px;
+        }
+
+        h1 {
+          font-size: 2.5rem;
+        }
+
+        #about p {
+          font-size: 1.2rem;
+        }
+
+        h2 {
+          font-size: 1.9rem;
+        }
+
+        /* ottimizzazione paragrafi e letter spacing titoli*/
+        h1,
+        p,
+        h2,
+        a {
+          letter-spacing: 0.1rem;
+        }
+
+        p {
+          font-size: 1rem;
+        }
+
+        #intro,
+        #skills,
+        .projects,
+        .contacts {
+          padding: 3rem 8rem;
+        }
+
+        .skills-container {
+          margin-bottom: 0.6rem;
+        }
+
+        .html-logo,
+        .css-logo {
+          width: 130px;
+          height: 130px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Menù -->
+    <header>
+      <nav>
+        <ul>
+          <li><a href=".">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contatti">Contatti</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- menù end -->
+
+    <!-- About section -->
+    <div>
+      <div id="about">
+        <picture>
+          <source srcset="assets/christian.webp" type="image/webp" />
+          <source srcset="assets/christian.avif" type="image/avif" />
+          <img src="assets/christian.webp" alt="Christian Bacchielli" />
+        </picture>
+        <div>
+          <h1>Christian Bacchielli</h1>
+          <p>Web Developer - Front End</p>
+        </div>
+      </div>
+      <div id="intro">
+        <h2>About</h2>
+        <p>
+          Ho 24 anni e sono appassionato di programmazione e tecnologia. <br />
+          Attualmente sto approfondendo i linguaggi e gli strumenti legati al
+          front-end, con l’obiettivo di creare interfacce moderne e funzionali.
+        </p>
+        <p>
+          Il mio obiettivo è crescere professionalmente e trasformare questa
+          passione in una vera e propria carriera. 🚀
+        </p>
+      </div>
+    </div>
+
+    <!-- Skills -->
+    <div id="skills">
+      <h2>Skills</h2>
+      <div class="skills-container">
+        <img
+          src="assets/html-logo.webp"
+          class="html-logo"
+          alt="HTML"
+          loading="lazy"
+        />
+        <img
+          src="assets/css-logo.webp"
+          class="css-logo"
+          alt="CSS"
+          loading="lazy"
+        />
+      </div>
+    </div>
+
+    <!-- Projects section -->
+    <div class="projects">
+      <h2>Progetti</h2>
+      <p>
+        In questa parte sarà possibile trovare tutti i miei progetti realizzati
+        individualmente. <br />
+        Arriveranno molto presto! 😉💪🏻
+      </p>
+    </div>
+
+    <!-- contacts part & footer -->
+    <footer>
+      <div class="contacts" id="contatti">
+        <h2>Contatti</h2>
+        <p>
+          Se vuoi collaborare con me o stai cercando qualcuno per un nuovo
+          progetto o un’assunzione, puoi scrivermi a:
+        </p>
+        <p id="email">
+          <a
+            href="mailto:bacchiellichristian@gmail.com"
+            aria-label="Scrivi a bacchiellichristian@gmail.com"
+          >
+            bacchiellichristian@gmail.com
+          </a>
+        </p>
+        <p>Rispondo sempre il prima possibile! 🚀</p>
+      </div>
+    </footer>
+  </body>
+</html>
